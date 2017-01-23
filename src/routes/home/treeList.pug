@@ -1,0 +1,7 @@
+mixin listDirs(array, full)
+    ul
+        each item in array
+            li(class=(full[item.path] ? 'expanded': ''))     #{item.fileName}
+            if full[item.path]
+                +listDirs(full[item.path], full)
++listDirs(array, full)

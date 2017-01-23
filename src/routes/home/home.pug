@@ -1,0 +1,13 @@
+doctype html
+html(lang="en")
+    head
+        script(src="/api/static/script/jquery-3.1.1.js")
+        link(rel="stylesheet" href="/api/static/css/index.css")  
+        title File Explorer
+    body
+        #leftMenu
+            -var array = final['/']
+            -var full = final
+            include treeList
+        #previewPane  
+            include previewPane                

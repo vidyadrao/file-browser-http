@@ -1,0 +1,3 @@
+each item in previewPanel
+                    .childNode(class=item.isFile ? 'file' : '')  
+                        a(title="click to download" href="/api/download?name="+item.path) #{item.fileName}
