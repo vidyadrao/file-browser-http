@@ -1,6 +1,4 @@
 "use strict";
-const spawn = require('child_process').spawn;
-let serverProcess = null;
 module.exports = grunt => {
     grunt.loadNpmTasks('grunt-contrib-clean');
     grunt.loadNpmTasks('grunt-contrib-less');
