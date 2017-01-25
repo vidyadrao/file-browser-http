@@ -1,0 +1,9 @@
+mixin listDirs(array, full)
+    ul
+        each item in array
+            li(data-path=item.path  class=(full[item.path] ? 'expanded': ''))
+                a(href="#")
+                span #{item.fileName}
+                if full[item.path]
+                    +listDirs(full[item.path], full)
++listDirs(array, full)

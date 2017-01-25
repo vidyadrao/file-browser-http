@@ -2,7 +2,7 @@
 const pug = require('pug');
 const path = require('path');
 const list = require('../list');
-const compiledPug = pug.compileFile(require.resolve('./home.pug'));
+const compiledPug = pug.compileFile(require.resolve('./templates/home.pug'));
 
 module.exports = (dirname, response) => {
     let dirList = dirname.split('/').filter(dir => dir),

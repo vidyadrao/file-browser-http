@@ -1,0 +1,20 @@
+"use strict";
+const $ = require('jquery');
+const previewpug = require('../templates/previewPane.pug');
+module.exports.init = () => {
+    $(document).on('click', 'li[data-path]>span', e => {
+        module.exports.loadPreview($(e.target).parent('li').data('path'));
+        e.stopImmediatePropagation();
+    });
+};
+let oldPath = "";
+module.exports.loadPreview = path => {
+    if(oldPath === path){
+        return;
+    }
+    oldPath = path;
+    $.getJSON("/api/get", {dirname:path, includeFiles: true}, (data) => {
+        $('#previewPane').empty();
+        $('#previewPane').append(previewpug({previewPanel: data}));
+    });
+};
