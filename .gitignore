@@ -1,5 +1,5 @@
 node_modules
 .idea
 *.css
-*.browser.js
+*.browserify.js
 docs
