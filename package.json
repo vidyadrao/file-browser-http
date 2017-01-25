@@ -1,5 +1,5 @@
 {
-  "name": "file-explorer-http",
+  "name": "file-browser-http",
   "version": "1.0.0",
   "description": "File Browser",
   "main": "src/server.js",
